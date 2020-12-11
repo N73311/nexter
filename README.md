@@ -1,8 +1,7 @@
 # Nexter
-[![GitHub Release](https://img.shields.io/github/release/zjayers/nexter.svg?style=flat)]()
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/zjayers/nexter.svg?style=flat)]()
+[![GitHub Release](https://img.shields.io/github/release/zjayers/nexter.svg?style=flat)](https://github.com/zjayers/nexter/releases)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/zjayers/nexter.svg?style=flat)](https://github.com/zjayers/nexter/pulls)
 [![Issues](https://img.shields.io/github/issues-raw/zjayers/nexter.svg?maxAge=25000)](https://github.com/zjayers/nexter/issues)
-[![MIT License](https://img.shields.io/apm/l/atomic-ui.svg?)](https://github.com/zjayers/nexter/blob/master/LICENSEs)
 
 ## Description
 
