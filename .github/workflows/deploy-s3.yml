@@ -34,7 +34,7 @@ jobs:
         run: |
           aws s3 sync . s3://www.nexter.zachayers.io --delete \
             --exclude "sass/*" \
-            --exclude "node_modules/*" \
+            --exclude "node_modules/**" \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "package*.json" \
