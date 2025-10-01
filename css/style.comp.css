@@ -400,6 +400,15 @@ body {
   z-index: 2;
   justify-self: end;
   margin: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.home__like:hover {
+  transform: scale(1.1);
+}
+.home__like.liked {
+  fill: #c69963;
+  opacity: 1;
 }
 .home__name {
   grid-row: 1/2;
