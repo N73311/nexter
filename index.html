@@ -13,8 +13,25 @@
     </head>
     <body class="container">
         <div class="sidebar">
-            <button class="nav-btn"></button>
+            <button class="nav-btn" aria-label="Toggle navigation menu">
+                <span></span>
+            </button>
         </div>
+
+        <div class="mobile-nav-overlay"></div>
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a href="#features" class="mobile-nav__link" data-section="features">Features</a></li>
+                <li class="mobile-nav__item"><a href="#homes" class="mobile-nav__link" data-section="homes">Properties</a></li>
+                <li class="mobile-nav__item"><a href="#story" class="mobile-nav__link" data-section="story">Testimonials</a></li>
+                <li class="mobile-nav__item"><a href="#gallery" class="mobile-nav__link" data-section="gallery">Gallery</a></li>
+                <li class="mobile-nav__item"><a href="#realtors" class="mobile-nav__link" data-section="realtors">Realtors</a></li>
+                <div class="mobile-nav__divider"></div>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link" data-action="contact">Contact Us</a></li>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link" data-action="proposal">Request Proposal</a></li>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link" data-action="careers">Careers</a></li>
+            </ul>
+        </nav>
 
         <header class="header">
             <img src="img/logo.png" alt="Nexter logo" class="header__logo">
@@ -30,7 +47,7 @@
             </div>
         </header>
 
-        <div class="realtors">
+        <div class="realtors" id="realtors">
             <h3 class="heading-3">Top 3 Realtors</h3>
             <div class="realtors__list">
                 <img src="img/realtor-1.jpeg" alt="Realtor 1" class="realtors__img">
@@ -53,7 +70,7 @@
             </div>
         </div>
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="feature">
                 <svg class="feature__icon">
                     <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -103,7 +120,7 @@
             </div>
         </section>
 
-        <div class="story__pictures">
+        <div class="story__pictures" id="story">
             <img src="img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
             <img src="img/story-2.jpeg" alt="New house" class="story__img--2">
         </div>
@@ -117,7 +134,7 @@
             <button class="btn">Find your own home</button>
         </div>
 
-        <section class="homes">
+        <section class="homes" id="homes">
             <div class="home">
                 <img src="img/house-1.jpeg" alt="House 1" class="home__img">
                 <svg class="home__like">
@@ -319,7 +336,7 @@
         </section>
 
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>
             <figure class="gallery__item gallery__item--2"><img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img"></figure>
             <figure class="gallery__item gallery__item--3"><img src="img/gal-3.jpeg" alt="Gallery image 3" class="gallery__img"></figure>
@@ -348,6 +365,18 @@
                     <li class="nav__item"><a href="#" class="nav__link">Come work with us!</a></li>
             </ul>
         </footer>
+
+        <div class="modal" id="modal" role="dialog" aria-modal="true">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2 class="modal__title" id="modal-title"></h2>
+                    <button class="modal__close" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal__body" id="modal-body"></div>
+            </div>
+        </div>
+
         <script src="js/main.js"></script>
     </body>
 </html>

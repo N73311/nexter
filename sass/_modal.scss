@@ -1,0 +1,239 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-secondary, .85);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+    }
+
+    &__content {
+        position: relative;
+        background-color: #fff;
+        max-width: 60rem;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 3px;
+        box-shadow: 0 2rem 5rem rgba(#000, .3);
+        z-index: 10000;
+        transform: translateY(-3rem);
+        transition: transform .3s ease;
+
+        @media only screen and (max-width: $bp-small) {
+            max-width: 95%;
+        }
+    }
+
+    &.active &__content {
+        transform: translateY(0);
+    }
+
+    &__header {
+        padding: 3rem 4rem 2rem;
+        border-bottom: 1px solid $color-grey-light-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 2rem 2.5rem 1.5rem;
+        }
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: 2.4rem;
+        color: $color-secondary;
+        font-weight: 400;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        font-size: 3.5rem;
+        color: $color-grey-light-2;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color .2s;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__body {
+        padding: 3rem 4rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 2rem 2.5rem;
+        }
+    }
+
+    &__property {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+
+        &-img {
+            width: 100%;
+            border-radius: 3px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            font-family: $font-display;
+            font-size: 1.8rem;
+            color: $color-secondary;
+            margin-bottom: .5rem;
+        }
+
+        &-price {
+            font-size: 2rem;
+            color: $color-primary;
+            font-weight: 600;
+        }
+
+        &-location {
+            font-size: 1.4rem;
+            color: $color-grey-dark-2;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.form {
+    &__group {
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $color-grey-dark-1;
+        margin-bottom: .8rem;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 1.2rem 1.5rem;
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        color: $color-grey-dark-2;
+        border: 1px solid $color-grey-light-2;
+        border-radius: 3px;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+            box-shadow: 0 0 0 3px rgba($color-primary, .1);
+        }
+
+        &::placeholder {
+            color: $color-grey-light-2;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 12rem;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__submit {
+        flex: 1;
+    }
+
+    &__cancel {
+        background-color: transparent;
+        color: $color-grey-dark-2;
+        border: 1px solid $color-grey-light-2;
+
+        &:hover {
+            background-color: $color-grey-light-1;
+            border-color: $color-grey-dark-2;
+        }
+    }
+}
+
+.info-message {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: $color-grey-dark-2;
+
+    p {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    strong {
+        color: $color-secondary;
+        font-weight: 600;
+    }
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            color: $color-primary-dark;
+            text-decoration: underline;
+        }
+    }
+}
