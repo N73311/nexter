@@ -13,8 +13,15 @@
     "compress:css": "sass css/style.prefix.css css/style.css --style=compressed --no-source-map",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Jonas",
-  "license": "ISC",
+  "author": {
+    "name": "Zachariah Ayers",
+    "email": "zach@meridianvega.com",
+    "company": "Meridian Vega"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "22.20.0"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "concat": "^1.0.3",
